@@ -1,10 +1,15 @@
 import style from "../style.module.css";
-const TodoL = ({ todoItem }) => {
+const TodoL = ({ todoItem, todoList, setTodoList }) => {
+  const deleteTodo = () => {
+    setTodoList(todoList.filter((item) => item.id !== todoItem.id));
+  };
   return (
     <div>
       <div className={style.todoitem}>
         <h3 className={style.todoname}>{todoItem.name}</h3>
-        <button className={style.deletebutton}>Done</button>
+        <button onClick={deleteTodo} className={style.deletebutton}>
+          Done
+        </button>
       </div>
     </div>
   );
