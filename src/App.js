@@ -1,10 +1,9 @@
-import "./App.css";
-import Todo from "./components/Todo";
-
+import Header from "./components/Header";
+//import Todo from "./components/Todo";
 function App() {
   return (
     <div className="App">
-      <Todo />
+      <Header />
     </div>
   );
 }
